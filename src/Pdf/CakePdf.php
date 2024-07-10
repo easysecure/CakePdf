@@ -95,9 +95,9 @@ class CakePdf
     /**
      * Page size of the pdf
      *
-     * @var string
+     * @var array|string
      */
-    protected string $_pageSize = 'A4';
+    protected array|string $_pageSize = 'A4';
 
     /**
      * Orientation of the pdf
@@ -429,10 +429,10 @@ class CakePdf
     /**
      * Get/Set Page size.
      *
-     * @param string|null $pageSize Page size to set
+     * @param null|array|string $pageSize Page size to set
      * @return mixed
      */
-    public function pageSize(?string $pageSize = null): mixed
+    public function pageSize(null|array|string $pageSize = null): mixed
     {
         if ($pageSize === null) {
             return $this->_pageSize;
